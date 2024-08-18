@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2f3542;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: progress;
+}
+
+.photo{
+    position: relative;
+    width: 250px;
+    height: 280px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 20px 20px beige(0,0,0,0.2);
+    transition: 0.8s;
+    z-index: 2;
+}
+
+.photo::before,
+.photo::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #fff;
+    z-index: -2;
+}
+
+.photo:hover::before{
+    transform: rotate(10deg);
+    transition: 0.5s;
+}
+
+.photo:hover::after{
+    transform: rotate(20deg);
+    transition: 0.5s;
+}
+
+.image{
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    border-radius: 3px;
+    background-color: #2f3542;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo:hover .image{
+    bottom: 20%;
+    transition: 0.5s;
+}
+
+.detail{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 65px;
+    text-align: center;
+    font-weight: bold;
+}
+
+h4{
+    color:#222;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+h4 span{
+    font-size: 15px;
+    color: #ff4757;
+    text-transform: capitalize;
+}
+footer{
+    color: aqua;
+}
+
+footer:hover{
+    color: rebeccapurple;
+}
